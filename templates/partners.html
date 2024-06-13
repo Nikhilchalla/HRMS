@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/partners.css">
+    <title>HRMS Application</title>
+</head>
+<body>
+	<div class="container">
+		<div class="logo">
+			<a href="index.html">
+				<img src="static/hrlogo.png" alt="websitelogo">
+			</a>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li><a href="{{url_for('index')}}">Home</a></li>
+				<li class="dropdown">
+                    <a href="#" class="dropbtn">Features</a>
+                    <div class="dropdown-content">
+                        <a href="{{url_for('payroll')}}">Payroll</a>
+                        <a href="feature2.html">Attendence</a>
+                        <a href="feature3.html">Leave</a>
+						<a href="feature3.html">HR Software</a>
+                    </div>
+                </li>
+				<li><a href="#">Pricing</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="{{url_for('partners')}}">Partners</a></li>
+				<li><a href="#">Support</a></li>
+			</ul>
+		</div>
+        
+    </div>
+    <div class="hp">
+        <h1>What is HRMS Partner Program</h1> 
+        <p>HRMS Partner Program helps you maximize business and earning opportunities. 
+            Join as a Referral Partner or an Implementation Partner and unlock exciting new opportunities for your business. 
+            Get access to verified leads looking for your services, custom dashboard to access client’s details, and more.</p>
+    </div>
+    <h2 class="text">How it Works</h2>
+    <div class="card-container">
+          <div class="card">
+              <img src="#">
+              <div class="content">
+                <h2>Training & Knowledge Sharing</h2>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+          </div>
+          <div class="card">
+            <img src="#">
+            <div class="content">
+              <h2>Refer or Implement Kredily</h2>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+          <img src="#">
+          <div class="content">
+            <h2>Receive Partner Earnings</h2>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="#">
+          <div class="content">
+            <h2>Partner Program Sign-up</h2>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+    </div>
+
+  </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Website Planet. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>    
+        </ul>
+    </footer>
+	
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Attendance Dashboard</title>
+      <link rel="stylesheet" href="../static/attendance.css" />
+      <!-- Font Awesome Cdn Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#" class="logo">
+              <img src="../static/adminlogo.png">
+              <span class="nav-item">Admin</span>
+            </a></li>
+            <li><a href="{{url_for('dashboard')}}">
+              <i class="fas fa-tachometer-alt"></i>
+              <span class="nav-item">Dashboard</span>
+            </a></li>
+            <li><a href="{{url_for('attendance')}}">
+              <i class="fas fa-user-check"></i>
+              <span class="nav-item">Attendance</span>
+            </a></li>
+            <li><a href="{{url_for('payroll')}}">
+              <i class="fas fa-money-check"></i>
+              <span class="nav-item">Payroll</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fas fa-briefcase"></i>
+              <span class="nav-item">Leave</span>
+            </a></li>
+            <li><a href="{{url_for('calender')}}">
+              <i class="fas fa-calendar-alt"></i>
+              <span class="nav-item">Calender</span>
+            </a></li>
+    
+            <li><a href="{{url_for('index')}}" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Log out</span>
+            </a></li>
+          </ul>
+        </nav>
+        <section class="main">
+          <div class="main-top">
+            <h1 style="margin-left: 10px;">Attendance</h1>
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <div class="users">
+            <div class="card">
+              <img src="../static/user.png">
+              <h4>Nikhil</h4>
+              <p>Ui designer</p>
+              <button>Profile</button>
+            </div>
+            <div class="card">
+              <img src="../static/user.png">
+              <h4>Balu</h4>
+              <p>Progammer</p>
+              <button>Profile</button>
+            </div>
+            <div class="card">
+              <img src="../static/user.png">
+              <h4>Rithvik</h4>
+              <p>tester</p>
+              <button>Profile</button>
+            </div>
+            <div class="card">
+              <img src="../static/user.png">
+              <h4>Siddu</h4>
+              <p>Ui designer</p>
+              <button>Profile</button>
+            </div>
+          </div>
+    
+          <section class="attendance">
+            <div class="attendance-list">
+              <h1>Attendance List</h1>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>W-Days</th>
+                    <th>Date-Time</th>
+                    <th>Join Time</th>
+                    <th>Logout Time</th>
+                    <th>Daily CheckIn</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  {% for row in user %}
+                  <tr >
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>9:00AM</td>
+                    <td>4:00PM</td>
+                    <td>
+                      <form method="POST" action="{{ url_for('mark_attendance') }}">
+                        <input type="hidden" name="user_id" value="{{ row[0] }}" />
+                        <button type="submit" name="count">Mark</button>
+                      </form>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </div>
+    
+  </body>
+  </html>

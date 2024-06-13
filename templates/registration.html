@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="static/registration.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="static/websiteplanet.png" alt="websitelogo">
+            </a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Display flashed messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+    <div class="main">
+        <div class="hero">
+            <div class="sign-up-form">
+                <h2>Sign Up</h2>
+                <form action="{{ url_for('registration') }}" method="post">
+                    <p>User Name:</p>
+                    <input type="text" name="username" placeholder="User Name" required>
+                    <p>Email:</p>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <p>Password:</p>
+                    <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" title="Password must contain at least one number, one uppercase letter, one lowercase letter, one special character, and be at least 8 characters long" required>
+                    <input type="submit" value="submit" onclick="confirmpassword()">
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Website Planet. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

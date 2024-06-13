@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Dashboard</title>
+      <link rel="stylesheet" href="../static/dashboard.css" />
+      <!-- Font Awesome Cdn Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#" class="logo">
+              <img src="../static/adminlogo.png">
+              <span class="nav-item">Admin</span>
+            </a></li>
+            <li><a href="{{url_for('dashboard')}}">
+              <i class="fas fa-tachometer-alt"></i>
+              <span class="nav-item">Dashboard</span>
+            </a></li>
+            <li><a href="{{url_for('attendance')}}">
+              <i class="fas fa-user-check"></i>
+              <span class="nav-item">Attendance</span>
+            </a></li>
+            <li><a href="{{url_for('payroll')}}">
+              <i class="fas fa-money-check"></i>
+              <span class="nav-item">Payroll</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fas fa-briefcase"></i>
+              <span class="nav-item">Leave</span>
+            </a></li>
+            <li><a href="{{url_for('calender')}}">
+              <i class="fas fa-calendar-alt"></i>
+              <span class="nav-item">Calender</span>
+            </a></li>
+    
+            <li><a href="{{url_for('index')}}" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Log out</span>
+            </a></li>
+          </ul>
+        </nav>
+
+        <section class="main">
+          <div class="main-top">
+            <h1 style="margin-left: 10px;">Dashboard</h1>
+            <hr>
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <br><br>
+          <div class="htag">
+            <h1 style="text-align: center;">Admin , Access portal !</h1>
+          </div>
+          <div class="p">
+            <p>An HR dashboard is a business intelligence tool that allows Human Resource teams to track, analyze and report on HR KPIs. Modern, interactive dashboards leverage an HR analytics platform which makes it easy to combine data from all systems and to deeply explore this data directly within the dashboard.</p>
+          </div>
+          <div class="users">
+            <div class="card">
+              <h2>Staff</h2>
+              <h3>60</h3>
+            </div>
+            <div class="card">
+              <h2>Closed Projects</h2>
+              <h3>2</h3> 
+           </div>
+            <div class="card">             
+              <h2>Projects in Pipeline</h2>
+              <h3>4</h3>
+            </div>
+            <div class="card">
+                <h2>Overall projects</h2>
+                <h3>6</h3>
+            </div>
+      </div>
+    
+  </body>
+  </html>

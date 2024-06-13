@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Dashboard</title>
+      <link rel="stylesheet" href="../static/payroll.css" />
+      <!-- Font Awesome Cdn Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#" class="logo">
+              <img src="../static/adminlogo.png">
+              <span class="nav-item">Admin</span>
+            </a></li>
+            <li><a href="{{url_for('dashboard')}}">
+              <i class="fas fa-tachometer-alt"></i>
+              <span class="nav-item">Dashboard</span>
+            </a></li>
+            <li><a href="{{url_for('attendance')}}">
+              <i class="fas fa-user-check"></i>
+              <span class="nav-item">Attendance</span>
+            </a></li>
+            <li><a href="{{url_for('payroll')}}">
+              <i class="fas fa-money-check"></i>
+              <span class="nav-item">Payroll</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fas fa-briefcase"></i>
+              <span class="nav-item">Leave</span>
+            </a></li>
+            <li><a href="{{url_for('calender')}}">
+              <i class="fas fa-calendar-alt"></i>
+              <span class="nav-item">Calender</span>
+            </a></li>
+    
+            <li><a href="{{url_for('index')}}" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Log out</span>
+            </a></li>
+          </ul>
+        </nav>
+        <section class="main">
+          <div class="main-top">
+            <h1>Payroll</h1>
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <section class="attendance">
+            <div class="attendance-list">
+              <h1>Payment Details</h1>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>W-Days</th>
+                    <th>Salary Perday</th>
+                    <th>Cumulative permonth</th>
+                    <th>Email</th>
+                    <th>Mobile Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <!-- data fetching -->
+                {% for row in user %}
+                  <tr >
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td></td>
+                    <td>{{ row[5] }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </div>
+    
+  </body>
+  </html>

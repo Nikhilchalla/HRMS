@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Calender</title>
+      <link rel="stylesheet" href="../static/calender.css" />
+      <!-- Font Awesome Cdn Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#" class="logo">
+              <img src="../static/adminlogo.png">
+              <span class="nav-item">Admin</span>
+            </a></li>
+            <li><a href="{{url_for('dashboard')}}">
+              <i class="fas fa-tachometer-alt"></i>
+              <span class="nav-item">Dashboard</span>
+            </a></li>
+            <li><a href="{{url_for('attendance')}}">
+              <i class="fas fa-user-check"></i>
+              <span class="nav-item">Attendance</span>
+            </a></li>
+            <li><a href="{{url_for('payroll')}}">
+              <i class="fas fa-money-check"></i>
+              <span class="nav-item">Payroll</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fas fa-briefcase"></i>
+              <span class="nav-item">Leave</span>
+            </a></li>
+            <li><a href="{{url_for('calender')}}">
+              <i class="fas fa-calendar-alt"></i>
+              <span class="nav-item">Calender</span>
+            </a></li>
+    
+            <li><a href="{{url_for('index')}}" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Log out</span>
+            </a></li>
+          </ul>
+        </nav>
+
+        <!-- <section class="calendar">
+          <div class="main-top">
+            <h1 style="margin-left: 10px;">Calender</h1>
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <div id="cal">
+            <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=2&ctz=UTC&bgcolor=%23039BE5&title=HRMS&showPrint=0&src=ZTg4ZmEzNmM3MzljZDZlYTI1M2Y4YWZiMjJhNDYxZmQ3NTBlNjFiNzMxYWQyYWVkOWIxMWIxNmVkM2RlOGJkZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="800" height="800" frameborder="0" scrolling="no"></iframe>    
+          </div>
+        </section> -->
+        <section class="main">
+          <div class="main-top">
+            <h1>Calendar</h1>
+            <i class="fas fa-user-cog"></i>
+         </div>
+         <div id="cal">
+          <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=2&ctz=UTC&bgcolor=%23039BE5&title=HRMS&showPrint=0&src=ZTg4ZmEzNmM3MzljZDZlYTI1M2Y4YWZiMjJhNDYxZmQ3NTBlNjFiNzMxYWQyYWVkOWIxMWIxNmVkM2RlOGJkZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="800" height="800" frameborder="0" scrolling="no"></iframe>    
+        </div>
+        </div>
+
+    
+  </body>
+  </html>

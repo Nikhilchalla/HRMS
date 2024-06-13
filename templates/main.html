@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="static/styles1.css">
+    <title>HRMS Application</title>
+</head>
+<body>
+	<div class="container">
+		<div class="logo">
+			<a href="index.html">
+				<img src="static/hrlogo.png" alt="websitelogo">
+			</a>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li><a href="{{url_for('main')}}">Home</a></li>
+				<li class="dropdown">
+                    <a href="#" class="dropbtn">Features</a>
+                    <div class="dropdown-content">
+                        <a href="{{url_for('payroll')}}">Payroll</a>
+                        <a href="{{url_for('attendance')}}">Attendence</a>
+                        <a href="feature3.html">Leave</a>
+						<a href="feature3.html">HR Software</a>
+                    </div>
+                </li>
+				<li><a href="#">Pricing</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="{{url_for('partners')}}">Partners</a></li>
+				<li><a href="{{url_for('support')}}">Support</a></li>
+			</ul>
+		</div>
+    </div>
+	<!-- Display flashed messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+	<div class="main">
+		<div class="hero">
+            <div  class="logo1">
+                <img src="static/logo.png" alt="websitelogo">
+            </div>
+			<h1>Timeless Attendance, HR & Payroll Software: <br> Infinite Employee Management</h1>
+			<p>Trusted by 20,000+ Companies & 8,00,000+ Employee</p>
+		</div>
+
+		<div class="htag">
+			<h1>Join 20,000+ HR Leaders across India Using HRMS</h1>
+		</div>
+		
+		<div class="card-container">
+			<div class="card">
+			  <img src="static/attandence.png" alt="Card 1">
+			  <h2>Attendance Tracker</h2>
+			  <p>Empower your organization's expansion with the implementation of flawless attendance management. Elevate overall productivity, cultivate heightened employee engagement, and foster stronger interpersonal connections within your workforce.</p>
+			</div>
+			<div class="card">
+			  <img src="static/simplicity.png" alt="Card 2">
+			  <h2>Simplicity Redefined</h2>
+			  <p>Our easy-to-use features simplify HR management, reducing complexity and enhancing efficiency.</p>
+			</div>
+			<div class="card">
+			  <img src="static/quickresponse.png" alt="Card 3">
+			  <h2>Quick Response</h2>
+			  <p>Experience prompt support and assistance from our dedicated team, ensuring you get the help you need without any delays.</p>
+			</div>
+		</div>
+		<div class="card-container">
+			<div class="card">
+			  <img src="static/rules.png" alt="Card 1">
+			  <h2>Set Rule, Automate,Forget</h2>
+			  <p>Enhance your human resources operations by establishing structured protocols, allowing our software to seamlessly manage the remaining tasks. </p>
+			</div>
+			<div class="card">
+			  <img src="static/15mins.png" alt="Card 2">
+			  <h2>15 Minutes Setup</h2>
+			  <p>Embark on a swift and trouble-free journey as you activate your account in just 15 minutes. </p>
+			</div>
+			<div class="card">
+			  <img src="static/guaranteed.png" alt="Card 3">
+			  <h2>Guaranteed Same Day Implementation</h2>
+			  <p>No more delays! We guarantee a swift deployment process, allowing you to promptly start reaping the benefits.</p>
+			</div>
+		</div>
+	</div>
+    <footer class="footer">
+            <p>&copy; 2024 Website Planet. All rights reserved.</p>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li> 
+            </ul>
+    </footer>
+	
+</body>
+</html>

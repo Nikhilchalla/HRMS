@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e2e2e2;
+  
+}
+
+.container {
+  max-width: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  background: skyblue;
+}
+
+.logo {
+  float: right;
+  padding-right: 30px;
+}
+
+.logo img {
+  height: 55px;
+  padding-top: 8px;
+}
+
+.navbar {
+  float: left;
+  margin-left: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.navbar li a:hover {
+  background-color: #AF2655;
+  color: white;
+  border-top: 10px;
+  margin-top: 2px;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background-color: #e2e2e2;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 65px;
+}
+
+.hero button {
+  background-color: #AF2655;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: blink;
+  display: inline-block;
+  font-size: 16px;
+  margin: -26px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  border-style: none;
+  transition: background-color 0.5s ease;
+}
+
+.hero button:hover {
+  background-color: skyblue;
+}
+
+.get-help {
+  text-align: center;
+  color: white;
+}
+
+.get-help-btn {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 100px;
+  right: 15px;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.footer {
+  background-color: skyblue;
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 98%;
+  bottom: 0%;
+  left: 0%;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin-right: 20px;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ccc;
+}
+
+.p {
+  text-align: center;
+}
+
+.img {
+  float: right;
+}
+
+.logo1 img {
+  margin-left: 20px;
+}
+
+.sign-up-form {
+  width: 300px;
+  margin-left: 40%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #AF2655;
+  border-radius: 20px;
+}
+
+.sign-up-form h2 {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  color: white;
+}
+
+.sign-up-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-form p {
+  margin-bottom: 5px;
+  text-align: left;
+  color: white;
+}
+
+.sign-up-form input[type="text"],
+.sign-up-form input[type="password"],
+.sign-up-form input[type="email"] {
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sign-up-form input[type="submit"] {
+  background-color: skyblue;
+  color: black;
+  padding: 10px 20px;
+ 
+}
+
+
